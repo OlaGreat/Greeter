@@ -17,7 +17,7 @@ function App() {
    const handleSet = async () => {
     try {
       if (!text) {
-        ;
+      toast.error("Please enter a message before clicking set message.");
         return;
       }
 
@@ -32,6 +32,8 @@ function App() {
         toast.success("Transaction successful:", txReceipt);
       } else {
         console.error("MetaMask not found. Please install MetaMask to use this application.");
+        toast.error("MetaMask not found. Please install MetaMask to use this application.");
+
       }
     } catch (error) {
       console.error("Error setting message:", error);
@@ -54,6 +56,7 @@ function App() {
         toast.success("fetched message", tx)
       } else {
         console.error("MetaMask not found. Please install MetaMask to use this application.");
+        toast.error("MetaMask not found. Please install MetaMask to use this application.");
       }
     } catch (error) {
       console.error("Error setting message:", error);
