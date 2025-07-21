@@ -53,7 +53,7 @@ function App() {
 
         const tx = await contract.getMessage(); 
         setMessage(tx)
-        toast.success("fetched message", tx)
+        toast.success("fetched message: ", tx)
       } else {
         console.error("MetaMask not found. Please install MetaMask to use this application.");
         toast.error("MetaMask not found. Please install MetaMask to use this application.");
