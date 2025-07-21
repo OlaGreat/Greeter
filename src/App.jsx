@@ -29,7 +29,7 @@ function App() {
 
         const tx = await contract.setMessage(text); 
         const txReceipt = await tx.wait();
-        toast.success("Transaction successful:", txReceipt);
+        toast.success("Transaction successful");
       } else {
         console.error("MetaMask not found. Please install MetaMask to use this application.");
         toast.error("MetaMask not found. Please install MetaMask to use this application.");
